@@ -1,2 +1,6 @@
 Devops demo
+<<<<<<< HEAD
 master changes
+=======
+changes from demo1
+>>>>>>> demo1
