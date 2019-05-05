@@ -9,8 +9,8 @@ pipeline {
   options {
     timestamps()
   }
-  
-stage("Create new tag") {
+  stages {
+   stage("Create new tag") {
          when {
                expression {env.BRANCH_NAME == 'master'}
             }                     
@@ -33,8 +33,8 @@ stage("Create new tag") {
                         """
                     
                 }
-              }
-                
+              }  
             }
         }
+  }
 }
