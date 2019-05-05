@@ -15,7 +15,7 @@ pipeline {
                expression {env.BRANCH_NAME == 'master'}
             }                     
             steps { 
-              sshagent (credentials: ['test-git-tag'])                        
+              sshagent (credentials: ['git@github.com:BijiNair/remotebranchdemo.git'])                        
                 {
                 script {
                         def tag = sh(returnStdout: true, script: "git tag | tail -1").trim()
